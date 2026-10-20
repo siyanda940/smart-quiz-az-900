@@ -10,7 +10,8 @@ import { buttonClass, Card } from "@/components/quiz/ui";
 const COUNTS = [5, 10, 15];
 
 export const Route = createFileRoute("/setup")({
-  validateSearch: (s: Record<string, unknown>) => ({ topics: typeof s.topics === "string" ? s.topics : undefined }),
+  validateSearch: (s: Record<string, unknown>): { topics?: string } =>
+    typeof s["topics"] === "string" ? { topics: s["topics"] } : {},
   head: () => ({
     meta: [
       { title: "Set up your quiz | Smart Quiz AZ-900" },
