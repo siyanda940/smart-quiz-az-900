@@ -39,7 +39,7 @@ function QuizScreen() {
     );
   }
 
-  const q = current.questions[current.index];
+  const q = current.questions[current.index]!;
   const attempt = current.attempts[current.index];
   const feedback = attempt?.feedback ?? null;
   const isLast = current.index + 1 === current.questions.length;
@@ -48,7 +48,7 @@ function QuizScreen() {
   const stateFor = (id: string): OptionState => {
     if (!feedback) return selected === id ? "selected" : "idle";
     if (id === feedback.correctOptionId) return "correct";
-    if (id === attempt.selectedOptionId) return "incorrect";
+    if (id === attempt?.selectedOptionId) return "incorrect";
     return "dimmed";
   };
 
@@ -82,7 +82,7 @@ function QuizScreen() {
 
         <div role="radiogroup" aria-label="Answer options" className="mt-6 space-y-3">
           {q.options.map((o, i) => (
-            <AnswerOptionCard key={o.id} letter={LETTERS[i]} text={o.text} state={stateFor(o.id)} disabled={!!feedback} onSelect={() => setSelected(o.id)} />
+            <AnswerOptionCard key={o.id} letter={LETTERS[i] ?? ""} text={o.text} state={stateFor(o.id)} disabled={!!feedback} onSelect={() => setSelected(o.id)} />
           ))}
         </div>
 

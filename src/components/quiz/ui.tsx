@@ -111,7 +111,7 @@ export function AnswerOptionCard({ letter, text, state, disabled, onSelect }: { 
   );
 }
 
-export function FeedbackPanel({ feedback, correctText }: { feedback: AnswerFeedback | null; correctText?: string }) {
+export function FeedbackPanel({ feedback, correctText }: { feedback: AnswerFeedback | null; correctText?: string | undefined }) {
   return (
     <div aria-live="polite" className="min-h-[96px]">
       {feedback ? (

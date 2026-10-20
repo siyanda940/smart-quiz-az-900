@@ -41,7 +41,7 @@ function Review() {
               {a.question.options.map((o, i) => (
                 <AnswerOptionCard
                   key={o.id}
-                  letter={LETTERS[i]}
+                  letter={LETTERS[i] ?? ""}
                   text={o.text}
                   disabled
                   onSelect={() => {}}

@@ -33,6 +33,7 @@ export function QuizSessionProvider({ children }: { children: ReactNode }) {
     setCurrent((s) => {
       if (!s || s.attempts.length > s.index) return s;
       const question = s.questions[s.index];
+      if (!question) return s;
       const feedback = quizProvider.submitAnswer(question.id, optionId);
       return { ...s, attempts: [...s.attempts, { question, selectedOptionId: optionId, feedback }] };
     });
