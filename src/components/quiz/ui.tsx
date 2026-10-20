@@ -14,7 +14,7 @@ export function AppHeader() {
             <GraduationCap className="h-5 w-5 text-primary-foreground" aria-hidden />
           </span>
           <span className="font-display text-lg font-bold tracking-tight">
-            Smart Quiz <span className="text-subtle font-medium">· AZ-900</span>
+            Smart Quiz <span className="hidden text-subtle font-medium sm:inline">· AZ-900</span>
           </span>
         </Link>
         <nav className="flex items-center gap-1 text-sm">
