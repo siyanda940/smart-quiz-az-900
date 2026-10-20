@@ -15,14 +15,42 @@ export interface Topic {
 export interface AnswerOption {
   id: string;
   text: string;
+  /** Per-option explanation, revealed only after submission. */
+  explanation?: string;
 }
+
+export type Difficulty = "easy" | "medium" | "hard";
 
 export interface PublicQuestion {
   id: string;
   topicId: TopicId;
   text: string;
   options: AnswerOption[]; // exactly four, rendered A–D
+  subtopic?: string;
+  difficulty?: Difficulty;
   isDemo?: boolean;
+}
+
+/**
+ * Question-bank record (src/data/questions.json). Contains the correct
+ * answer, so it must never reach the UI directly — a QuizProvider strips
+ * it down to PublicQuestion and returns correctness via AnswerFeedback.
+ */
+export interface BankOption {
+  id: string;
+  text: string;
+  explanation: string;
+}
+
+export interface BankQuestion {
+  id: string;
+  topic: TopicId;
+  subtopic: string;
+  difficulty: Difficulty;
+  question: string;
+  options: BankOption[]; // exactly four
+  correctOptionId: string;
+  explanation: string; // overall explanation
 }
 
 export interface AnswerFeedback {

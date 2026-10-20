@@ -1,0 +1,33 @@
+[
+  {
+    "id": "cc1",
+    "topic": "cloud-concepts",
+    "subtopic": "Cloud models",
+    "difficulty": "easy",
+    "question": "Which cloud model lets you run workloads on-premises and in a public cloud together?",
+    "options": [
+      {
+        "id": "cc1-0",
+        "text": "Public cloud",
+        "explanation": "A public cloud is run entirely by a third-party provider; it does not include your on-premises infrastructure."
+      },
+      {
+        "id": "cc1-1",
+        "text": "Private cloud",
+        "explanation": "A private cloud is dedicated to a single organisation and does not by itself include public cloud resources."
+      },
+      {
+        "id": "cc1-2",
+        "text": "Hybrid cloud",
+        "explanation": "Correct — a hybrid cloud combines on-premises (private) infrastructure with public cloud resources so they work together."
+      },
+      {
+        "id": "cc1-3",
+        "text": "Community cloud",
+        "explanation": "A community cloud is shared by several organisations with common requirements, not a mix of on-premises and public cloud."
+      }
+    ],
+    "correctOptionId": "cc1-2",
+    "explanation": "A hybrid cloud combines on-premises (private) infrastructure with public cloud resources, letting workloads move between them."
+  }
+]
