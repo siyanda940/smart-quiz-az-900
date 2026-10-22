@@ -66,3 +66,13 @@ Built for the #1MillionDevs Vibe Coding Hackathon, with the goal of making certi
 ## Current Status
 
 The application is deployed and the live learner flow has been tested, including the dashboard, quiz feedback, explanations, and results page.
+
+## Team Contributions
+
+This project was developed collaboratively as part of a hackathon.
+
+- **Question bank:** My teammate used Claude AI to help generate the AZ-900 practice questions.
+- **Integration and interface:** I integrated the generated question bank into the Smart Quiz application and worked on the user interface and quiz experience.
+- **AI-assisted development:** Claude AI and other development tools supported the development process.
+
+Both team members contributed to building the final Smart Quiz AZ-900 prototype.
